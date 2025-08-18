@@ -1,9 +1,15 @@
-import requests 
+import requests
 
-response= requests.get("https://jsonplaceholder.typicode.com/")
+def verificar_api(url: str):
+    """Função para verificar se uma API está respondendo corretamente"""
+    try:
+        response = requests.get(url, timeout=5)
+        if response.status_code == 200:
+            print("Tudo OK ✅")
+        else:
+            print(f"Erro: código {response.status_code}")
+    except requests.exceptions.RequestException as e:
+        print(f"Falha na requisição: {e}")
 
-if response.status_code==200:
-    print("Tudo OK")
-
-else:
-    print("Erro")
+if __name__ == "__main__":
+    verificar_api("https://jsonplaceholder.typicode.com/")
