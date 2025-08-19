@@ -5,7 +5,7 @@ def verificar_api(url: str):
     try:
         response = requests.get(url, timeout=5)
         if response.status_code == 200:
-            print("Tudo OK ✅")
+            print("Operação realizada com sucesso!")
         else:
             print(f"Erro: código {response.status_code}")
     except requests.exceptions.RequestException as e:
