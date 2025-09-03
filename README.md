@@ -13,3 +13,6 @@ Verifique se estão instalados corretamente:
 ```bash
 python --version
 poetry --version
+
+
+<img width="1274" height="493" alt="image" src="https://github.com/user-attachments/assets/ed47c686-d642-4b7a-8e9d-4ca2866914ef" />
