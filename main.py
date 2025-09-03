@@ -16,26 +16,6 @@ def verificar_api(url: str, metodo: str = "GET", dados=None) -> str:
     except requests.exceptions.RequestException as e:
         return f"Falha na requisição ({metodo}): {e}"
 
-def verificar_conteudo(url: str, texto_esperado: str) -> str:
-    """Verifica se o conteúdo esperado existe na resposta"""
-    try:
-        response = requests.get(url, timeout=5)
-        if texto_esperado in response.text:
-            return "Conteúdo encontrado "
-        else:
-            return "Conteúdo não encontrado "
-    except requests.exceptions.RequestException as e:
-        return f"Falha na requisição: {e}"
-
-def verificar_https(url: str) -> str:
-    """Verifica se o site possui SSL válido"""
-    try:
-        requests.get(url, timeout=5, verify=True)
-        return "SSL válido "
-    except requests.exceptions.SSLError:
-        return "SSL inválido "
-    except requests.exceptions.RequestException as e:
-        return f"Falha na requisição: {e}"
 
 def verificar_redirecionamento(url: str) -> str:
     """Verifica se há redirecionamentos"""
