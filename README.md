@@ -15,4 +15,4 @@ python --version
 poetry --version
 
 
-<img width="1274" height="493" alt="image" src="https://github.com/user-attachments/assets/ed47c686-d642-4b7a-8e9d-4ca2866914ef" />
+!(<img width="1274" height="493" alt="image" src="https://github.com/user-attachments/assets/529d11ec-ac41-4cdf-b047-ad3d8f85b267" />)
